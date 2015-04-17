@@ -1,0 +1,19 @@
+<div class="col-md-6">
+  <div style="position: relative" ng-repeat="employee in employees track by $index">
+    <div class="item" ng-click="edit(employee)">
+      <div>
+        <h3>{{employee.lastName + ' ' + employee.firstName}}</h3>
+      </div>
+      <div>
+        <p>{{employee.position}}</p>
+      </div>
+    </div>
+    <div class="delete">
+      <button class="btn btn-danger glyphicon glyphicon-remove" ng-click="remove(employee)"></button>
+    </div>
+  </div>
+  <button class="btn btn-primary" ng-click="add()">Добавить</button>
+</div>
+<div class="col-md-6">
+  <div ui-view></div>
+</div>

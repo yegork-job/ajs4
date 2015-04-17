@@ -1,0 +1,18 @@
+<form name="empForm" ng-submit="empForm.$valid && save()" novalidate>
+  <h2>{{title}} сотрудника</h2>
+  <div class="form-group text-right" ng-class="{'has-success': empForm.$valid, 'has-error': empForm.$invalid}">
+    <div class="text-left">
+      <label for="lastName"><h3 style="margin-bottom: 0">Фамилия</h3></label>
+    </div>
+    <input class="form-control" id="lastName" ng-model="employee.lastName" type="text" value="employee.lastName" required>
+    <div class="text-left">
+      <label for="firstName"><h3 style="margin-bottom: 0">Имя</h3></label>
+    </div>
+    <input class="form-control" id="firstName" ng-model="employee.firstName" type="text" value="employee.firstName" required>
+    <div class="text-left">
+      <label for="position"><h3 style="margin-bottom: 0">Должность</h3></label>
+    </div>
+    <input class="form-control" id="position" ng-model="employee.position" type="text" value="employee.position" required>
+    <button class="btn btn-primary" type="submit" style="margin-top: 20px">Сохранить</button>
+  </div>
+</form>
